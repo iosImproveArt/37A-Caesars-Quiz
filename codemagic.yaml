@@ -6,12 +6,12 @@ workflows:
         
         ios_signing:
             distribution_type: app_store
-            bundle_identifier: com.crownquizlet
+            bundle_identifier: com.oldmanquiz
             
         groups:
             - DEFAULT
         vars:
-          BUNDLE_ID: "com.crownquizlet"
+          BUNDLE_ID: "com.oldmanquiz"
           XCODE_WORK: "Oldman Quiz.xcodeproj"
           XCODE_SCHEME: "Oldman Quiz"
           
