@@ -55,12 +55,15 @@ class QuestionViewModelOldman: ObservableObject {
         self.answer = answer
         
         if answer == currentQuestion.correctAnswer {
-            if questionNumber % 2 == 0 { player2RightAnswers += 1 } else { player1RightAnswers += 1 }
+            if questionNumber % 2 == 0 {
+                player2RightAnswers += 1
+            } else {
+                player1RightAnswers += 1
+            }
         } else if typeOfGame == .oneP {
             heartCount -= 1
             if heartCount <= 0 {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in showFinishView = true }
-                
                 return
             }
         }
@@ -73,6 +76,8 @@ class QuestionViewModelOldman: ObservableObject {
                 if typeOfGame == .withC {
                     questionNumber += 2
                     player2RightAnswers += [0, 1].randomElement()!
+                } else {
+                    questionNumber += 1
                 }
             }
         }
