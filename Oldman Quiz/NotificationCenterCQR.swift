@@ -1,7 +1,7 @@
 import UserNotifications
 
-class NotificationManagerOldman: NSObject, UNUserNotificationCenterDelegate {
-    static let shared = NotificationManagerOldman()
+class NotificationManagerOldman37: NSObject, UNUserNotificationCenterDelegate {
+    static let shared = NotificationManagerOldman37()
     
     private override init() {
         super.init()

@@ -43,7 +43,7 @@ struct LoadingViewSQ: View {
             }.background(1)
             
             
-            PrivacyViewOldman(showLoading: $showView)
+            PrivacyViewOldman37(showLoading: $showView)
                 .opacity(firstInApp ? 1: 0)
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuestionPickViewOldman: View {
+struct QuestionPickViewOldman37: View {
     
    var wrfw = "wfvrwv"
     var wrfvwr = 145.54524
@@ -28,20 +28,20 @@ struct QuestionPickViewOldman: View {
             
             VStack(spacing: isSE ? 20: 60) {
                 NavigationLink {
-                    QuestionViewOldman(type: .oneP)
+                    QuestionViewOldman37(type: .oneP)
                 } label: {
                     Image("1p")
                 }
                 
                 
                 NavigationLink {
-                    QuestionViewOldman(type: .withC)
+                    QuestionViewOldman37(type: .withC)
                 } label: {
                     Image("wc")
                 }
                 
                 NavigationLink {
-                    QuestionViewOldman(type: .withF)
+                    QuestionViewOldman37(type: .withF)
                 } label: {
                     Image("wf")
                 }
@@ -53,5 +53,5 @@ struct QuestionPickViewOldman: View {
 }
 
 #Preview {
-    ContentViewOldman(showLoading: false, selectedTab: .quiz)
+    ContentViewOldman37(showLoading: false, selectedTab: .quiz)
 }

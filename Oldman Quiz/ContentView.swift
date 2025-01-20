@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct ContentViewOldman: View {
+struct ContentViewOldman37: View {
     @AppStorage("notificationsAvalible") var notificationsAvalible = true
     @State var showLoading = true
     @State var selectedTab: Tabs = .quiz
@@ -26,13 +26,13 @@ struct ContentViewOldman: View {
                         
                         switch selectedTab {
                         case .quiz:
-                            QuestionPickViewOldman()
+                            QuestionPickViewOldman37()
                         case .profile:
-                            ProfileViewOldman()
+                            ProfileViewOldman37()
                         case .facts:
-                            FactsViewOldman()
+                            FactsViewOldman37()
                         case .questions:
-                            QuestionsViewOldman()
+                            QuestionsViewOldman37()
                         }
                         tapBar
                     }.background(2, padding: 0)
@@ -50,7 +50,7 @@ struct ContentViewOldman: View {
     private var topBar: some View {
         HStack {
             NavigationLink {
-                PrivacyViewOldman(showLoading: .constant(true), fromMainView: true)
+                PrivacyViewOldman37(showLoading: .constant(true), fromMainView: true)
             } label: {
                 Text("Privacy policy")
                     .withFont(size: 16, weight: .light, color: .hex("FFFFFF"))
@@ -61,9 +61,9 @@ struct ContentViewOldman: View {
             Button {
                 notificationsAvalible.toggle()
                 if notificationsAvalible {
-                    NotificationManagerOldman.shared.createDailyNotification()
+                    NotificationManagerOldman37.shared.createDailyNotification()
                 } else {
-                    NotificationManagerOldman.shared.removePendingNotifications()
+                    NotificationManagerOldman37.shared.removePendingNotifications()
                 }
             } label: {
                 Image("notification.label")
@@ -120,7 +120,7 @@ struct ContentViewOldman: View {
 }
 
 #Preview {
-    ContentViewOldman(showLoading: false)
+    ContentViewOldman37(showLoading: false)
 }
 
 
